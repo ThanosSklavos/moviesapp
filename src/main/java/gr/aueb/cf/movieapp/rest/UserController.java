@@ -55,7 +55,6 @@ public class UserController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalName = authentication.getName();
         User loggedUser = userService.getUserByUsername(currentPrincipalName);
-        UserDto dto = entityToDto(loggedUser);
         String imdbId = imdbDto.getImdbID();
 
         try {
@@ -75,7 +74,6 @@ public class UserController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalName = authentication.getName();
         User loggeduser = userService.getUserByUsername(currentPrincipalName);
-        UserDto dto = entityToDto(loggeduser);
         String imdbId = imdbDto.getImdbID();
 
         try {
